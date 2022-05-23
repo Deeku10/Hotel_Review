@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "214908092401",
+    "project_id": "hotel-review-bc7e6",
+    "storage_bucket": "hotel-review-bc7e6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214908092401:android:bea983a8f31b2f77834e50",
+        "android_client_info": {
+          "package_name": "com.example.hotel_management"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "214908092401-7f9painq73nll9o293qh21fnc661rcvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBhbOnKMZ_u6-1MCsCT9GR1FO6VcNnbhA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "214908092401-7f9painq73nll9o293qh21fnc661rcvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
