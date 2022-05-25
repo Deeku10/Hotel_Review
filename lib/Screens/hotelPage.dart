@@ -7,6 +7,7 @@ import 'package:hotel_management/widgets/heading.dart';
 import 'package:hotel_management/models/review.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HotelPage extends StatefulWidget {
   static const id = '';
@@ -48,7 +49,7 @@ class _HotelPageState extends State<HotelPage> {
     var w = context.width;
     String heading = '';
     String comment = '';
-
+    final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
       backgroundColor: t.backgroundColor,
       body: SafeArea(
@@ -124,6 +125,7 @@ class _HotelPageState extends State<HotelPage> {
                                           onPressed: () {
                                             FirebaseFirestore.instance
                                                 .collection('review')
+                                                // ignore: unnecessary_string_interpolations
                                                 .doc('${hotel.id}')
                                                 .update({
                                               snapshot.data![index].epoch:
@@ -211,7 +213,8 @@ class _HotelPageState extends State<HotelPage> {
                                           .millisecondsSinceEpoch
                                           .toString(),
                                       'comment': comment,
-                                      'heading': heading
+                                      'heading': heading,
+                                      'user': user.email
                                     }
                                   });
                                   Navigator.pop(context);

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => GoogleSignInProvider(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Hotel Review',
         theme: HotelAppTheme().hotelAppTheme,
         debugShowCheckedModeBanner: false,
         routes: {
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
           HomePage.id: (context) => const HomePage(),
           // HotelPage.id: (context) => const HotelPage()
         },
-        initialRoute: GoogleLogin.id,
+        initialRoute: HomePage.id,
       ),
     );
   }
